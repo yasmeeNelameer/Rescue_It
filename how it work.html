@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How it works - Rescue IT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="how it work.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo" onclick="window.location.href='Home.html'">Rescue<span>IT</span></div>
+    <ul class="nav-links">
+      <li><a href="Home.html" id="nav-home">Home</a></li>
+      <li><a href="prac.html" id="nav-food">Available Food</a></li>
+      <li><a href="how it work.html" class="active" id="nav-how">How It Works</a></li>
+      <li><a href="AboutPage.html" id="nav-about">About</a></li>
+    </ul>
+    <button class="nav-cta" onclick="window.location.href='Home.html#auth'">Get Started</button>
+    <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="Home.html">Home</a>
+    <a href="prac.html">Available Food</a>
+    <a href="how it work.html">How It Works</a>
+    <a href="AboutPage.html">About</a>
+    <a href="Home.html#auth">Get Started</a>
+  </div>
+
+  <section class="container">
+    <h1>Three steps. Three winners.<br><em>Zero waste.</em></h1>
+    <p class="subtitle">
+      Here's the full journey of a meal &mdash from a restaurant kitchen
+      to your dinner table or a community plate.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="hiw-step">1</div>
+        <h3>Restaurant uploads food</h3>
+        <p>
+          At the end of service, the kitchen photographs surplus dishes,
+          sets a discounted price, and chooses a pickup window.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="hiw-step">2</div>
+        <h3>User orders discounted food</h3>
+        <p>
+          Nearby customers view new listings, order in seconds, and pick up their meals or schedule a fast delivery.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="hiw-step">3</div>
+        <h3>Charity receives donations</h3>
+        <p>
+          Any unclaimed food is promptly offered to charity partners, helping reduce waste while supporting those in need.
+        </p>
+      </div>
+    </div>
+
+    <div class="result-box">
+      <h2>The result, in one sentence</h2>
+      <p>
+        "Restaurants stop wasting food, customers eat better for less,
+        and charities get the supply they need every single day."
+      </p>
+    </div>
+
+    <div class="buttons">
+      <button id="btnprimary" onclick="window.location.href='Home.html#auth'">Create a free account</button>
+      <button id="btnsecondary" onclick="window.location.href='Home.html#restaurant'">Partner your restaurant</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="cursor:pointer" onclick="window.location.href='Home.html'">Rescue<span>IT</span></div>
+        <p>Reducing food waste, fighting hunger, and building stronger communities  one meal at a time.</p>
+        <div class="social-row">
+          <div class="social-btn">X</div>
+          <div class="social-btn">f</div>
+          <div class="social-btn">in</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">Available Food</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a href="#">Donate Food</a></li>
+          <li><a href="#">Volunteer</a></li>
+          <li><a href="#">Partner With Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="font-size:13px; color:#64748B; margin-bottom:8px">Weekly food updates near you.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="your@email.com">
+          <button>Join</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span> 2026 Rescue IT. All rights reserved.</span>
+      <span>Zero waste. Zero hunger.</span>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('open');
+    }
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 10) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
+    });
+  </script>
+</body>
+
+</html>

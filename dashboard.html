@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Dashboard - Rescue IT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo" onclick="window.location.href='Home.html'">Rescue<span>IT</span></div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="prac.html">Available Food</a></li>
+            <li><a href="how it work.html">How It Works</a></li>
+            <li><a href="AboutPage.html">About</a></li>
+        </ul>
+        <button class="nav-cta sign-out">Sign out</button>
+        <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="Home.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="prac.html">Available Food</a>
+        <a href="how it work.html">How It Works</a>
+        <a href="AboutPage.html">About</a>
+        <a href="Home.html" class="sign-out">Sign out</a>
+    </div>
+
+    <div class="container">
+        <main>
+            <h1>Restaurant Dashboard</h1>
+            <p class="subtitle">List unsold food from today's service or donate directly to a charity.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span>Active listings</span>
+                    <h2>7</h2>
+                    <span class="trend positive">+2 today</span>
+                </div>
+                <div class="stat-card">
+                    <span>Meals rescued</span>
+                    <h2>142</h2>
+                    <span class="trend positive">+18 this week</span>
+                </div>
+                <div class="stat-card">
+                    <span>Recovered revenue</span>
+                    <h2>$1,284</h2>
+                    <span class="trend positive">+$220 vs last week</span>
+                </div>
+                <div class="stat-card">
+                    <span>Donations sent</span>
+                    <h2>23</h2>
+                    <span class="trend positive">3 charities</span>
+                </div>
+            </div>
+
+            <div class="forms-grid">
+                <form class="form-card" id="listing-form">
+                    <h3>Add new food listing</h3>
+                    <div class="input-group">
+                        <label>Food name</label>
+                        <input type="text" id="food-name" placeholder="Margherita pizza pack" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Description</label>
+                        <textarea id="food-desc" placeholder="What's in the box, allergens, pickup notes..." required></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label>Category</label>
+                        <select id="food-category" required>
+                            <option value="sandwiches">Sandwiches</option>
+                            <option value="desserts">Desserts</option>
+                            <option value="salads">Salads</option>
+                            <option value="pastries">Pastries</option>
+                        </select>
+                    </div>
+                    <div class="price-row">
+                        <div class="input-group">
+                            <label>Original price ($)</label>
+                            <input type="number" id="orig-price" value="24.00" step="0.01" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Discount (%)</label>
+                            <input type="number" id="discount" value="60" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Final price ($)</label>
+                            <input type="text" id="final-price" readonly value="9.60">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-publish">Publish listing</button>
+                </form>
+
+                <form class="form-card" id="donate-form">
+                    <h3>Donate to a charity</h3>
+                    <p style="font-size: 14px; color: #64748b; margin-bottom: 20px;">Have leftover food at closing? Send it directly to a partner charity in your area.</p>
+                    <div class="input-group">
+                        <label>Choose charity</label>
+                        <select id="charity-select" required>
+                            <option value="">Choose a charity...</option>
+                            <option value="1">Charity Organization A</option>
+                            <option value="2">Food Bank B</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>What are you donating?</label>
+                        <textarea id="donate-desc" placeholder="20 prepared meals, 10 loaves of bread..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-donate">Send donation</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="nav-logo" style="cursor:pointer" onclick="window.location.href='Home.html'">Rescue<span>IT</span></div>
+                <p>Reducing food waste, fighting hunger, and building stronger communities &mdash; one meal at a time.</p>
+                <div class="social-row">
+                    <div class="social-btn">X</div>
+                    <div class="social-btn">f</div>
+                    <div class="social-btn">in</div>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="prac.html">Available Food</a></li>
+                    <li><a href="how it work.html">How It Works</a></li>
+                    <li><a href="AboutPage.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get Involved</h4>
+                <ul>
+                    <li><a href="Home.html#restaurant">Donate Food</a></li>
+                    <li><a href="Home.html#volunteer">Volunteer</a></li>
+                    <li><a href="Home.html#restaurant">Partner With Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p style="font-size:13px; color:#64748B; margin-bottom:8px">Weekly food updates near you.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="your@email.com">
+                    <button>Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span> 2026 Rescue IT. All rights reserved.</span>
+            <span>Zero waste. Zero hunger.</span>
+        </div>
+    </footer>
+
+    <script src="dashboard.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('open');
+        }
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 10) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rescue IT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="Home.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo" onclick="showPage('home')">Rescue<span>IT</span></div>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('home')" class="active" id="nav-home">Home</a></li>
+      <li><a href="prac.html" id="nav-food">Available Food</a></li>
+      <li><a href="how it work.html" id="nav-how">How It Works</a></li>
+      <li><a href="AboutPage.html" id="nav-about">About</a></li>
+    </ul>
+    <button class="nav-cta" onclick="showPage('auth')">Get Started</button>
+    <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#" onclick="showPage('home'); closeMenu()">Home</a>
+    <a href="prac.html">Available Food</a>
+    <a href="how it work.html">How It Works</a>
+    <a href="AboutPage.html">About</a>
+    <a href="#" onclick="showPage('auth'); closeMenu()">Get Started</a>
+  </div>
+
+  <div class="page active" id="page-home">
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Good Food<br>Shouldn't Go to<br><em>Waste.</em></h1>
+        <p class="hero-desc">We connect restaurants, bakeries, and food providers with local volunteers and charities
+          &mdash;
+          so surplus food reaches people who need it, not landfills.</p>
+      </div>
+    </section>
+
+    <section class="how-it-works-section">
+      <div class="hiw-container">
+        <div class="hiw-header">
+          <h2>How Rescue IT works</h2>
+          <p>Three simple steps to turn surplus food into something meaningful.</p>
+        </div>
+        <div class="hiw-grid">
+          <div class="hiw-card">
+            <div class="hiw-step">1</div>
+            <h3>Restaurants list surplus</h3>
+            <p>Local kitchens upload unsold food at the end of service with photos, prices, and pickup windows.</p>
+          </div>
+          <div class="hiw-card">
+            <div class="hiw-step">2</div>
+            <h3>Users rescue meals</h3>
+            <p>Customers browse nearby deals, add to cart, and check out all in under a minute.</p>
+          </div>
+          <div class="hiw-card">
+            <div class="hiw-step">3</div>
+            <h3>Charities receive donations</h3>
+            <p>Anything still left at closing time is offered to charity partners with one tap.</p>
+          </div>
+        </div>
+        <div class="hiw-cta-container">
+          <a href="AboutPage.html" style="text-decoration: none;">
+            <button class="hiw-btn">Read the full story </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" style="cursor:pointer" onclick="showPage('home')">Rescue<span>IT</span></div>
+          <p>Reducing food waste, fighting hunger, and building stronger communities one meal at a time.</p>
+          <div class="social-row">
+            <div class="social-btn">X</div>
+            <div class="social-btn">f</div>
+            <div class="social-btn">in</div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#">Available Food</a></li>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="#">Donate Food</a></li>
+            <li><a href="#">Volunteer</a></li>
+            <li><a href="#">Partner With Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="font-size:13px; color:#64748B; margin-bottom:8px">Weekly food updates near you.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="your@email.com">
+            <button>Join</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span> 2026 Rescue IT. All rights reserved.</span>
+        <span>Zero waste. Zero hunger.</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <div class="page" id="page-auth">
+    <section class="auth-section">
+      <div class="auth-sidebar" id="auth-sidebar">
+        <a href="#home" onclick="showPage('home')" class="back-home"> Back home</a>
+
+        <div class="sidebar-content active" id="sidebar-user">
+          <h2>Rescue IT.<br>Save money.<br>Save the planet.</h2>
+          <p class="auth-sidebar-desc">Join hundreds of thousands of people rescuing meals every week from their
+            favorite local restaurants.</p>
+          <ul class="auth-features">
+            <li> Up to 70% off restaurant prices</li>
+            <li> New listings every evening</li>
+            <li> Pickup or fast local delivery</li>
+          </ul>
+          <p class="auth-trusted">Trusted by 800+ restaurant partners</p>
+        </div>
+
+        <div class="sidebar-content" id="sidebar-restaurant">
+          <h2>Turn surplus into success.</h2>
+          <p class="auth-sidebar-desc">List unsold food in seconds. Recover costs, reduce waste, and build customer
+            goodwill all from one dashboard.</p>
+          <ul class="auth-features">
+            <li> Recover up to 30% of food costs</li>
+            <li> One-click charity donations</li>
+            <li> Detailed waste analytics</li>
+          </ul>
+          <p class="auth-trusted">Loved by independent restaurants and chains alike</p>
+        </div>
+
+        <div class="sidebar-content" id="sidebar-volunteer">
+          <h2>Feed your community.</h2>
+          <p class="auth-sidebar-desc">Get instant notifications when restaurants donate surplus food. Send a
+            representative with one tap.</p>
+          <ul class="auth-features">
+            <li> Real-time donation alerts</li>
+            <li> Coordinated pickup logistics</li>
+            <li> Impact reports for grants</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="auth-content">
+        <div class="auth-card">
+          <div class="role-tabs">
+            <button class="role-tab active" onclick="setRole('user')" id="role-user">User</button>
+            <button class="role-tab" onclick="setRole('restaurant')" id="role-restaurant">Restaurant</button>
+            <button class="role-tab" onclick="setRole('volunteer')" id="role-volunteer">Volunteer</button>
+          </div>
+
+          <div class="auth-panel active" id="panel-register">
+            <h3 id="form-title-register">Create account</h3>
+            <p class="auth-panel-text" id="form-desc-register">Sign up to start rescuing meals.</p>
+            <form id="register-form" class="auth-form">
+              <input type="hidden" id="register-role" name="accountType" value="user">
+
+              <label for="register-name">Full Name</label>
+              <input id="register-name" name="name" type="text" placeholder="Enter your full name" required>
+
+              <label for="register-email">Email</label>
+              <input id="register-email" name="email" type="email" placeholder="you@example.com" required>
+
+              <label for="register-phone">Phone Number</label>
+              <input type="tel" id="register-phone" name="phone" placeholder="Enter your phone number" required>
+
+              <label for="register-password">Password</label>
+              <input id="register-password" name="password" type="password" placeholder="********" required>
+
+              <button type="submit" class="auth-submit">Create account</button>
+            </form>
+            <p class="auth-switch">Already have an account? <button type="button" onclick="switchAuthMode('login')">Sign
+                in</button></p>
+          </div>
+
+          <div class="auth-panel" id="panel-login">
+            <h3 id="form-title-login">Welcome back</h3>
+            <p class="auth-panel-text" id="form-desc-login">Sign in to keep rescuing meals.</p>
+            <form id="login-form" class="auth-form">
+              <label for="login-email">Email</label>
+              <input id="login-email" name="email" type="email" placeholder="you@example.com" required>
+
+              <label for="login-password">Password</label>
+              <input id="login-password" name="password" type="password" placeholder="********" required>
+
+              <button type="submit" class="auth-submit">Sign in</button>
+            </form>
+            <p class="auth-switch">New here? <button type="button" onclick="switchAuthMode('register')">Create an
+                account</button></p>
+          </div>
+
+          <p class="auth-message" id="auth-message" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script src="Home.js"></script>
+</body>
+
+</html>

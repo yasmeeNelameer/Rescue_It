@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Portal - Rescue IT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="charity.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo" onclick="window.location.href='Home.html'">Rescue<span>IT</span></div>
+        <ul class="nav-links">
+            <li><a href="charity.html" class="active">Notifications</a></li>
+            <li><a href="prac.html">Available Food</a></li>
+            <li><a href="how it work.html">How It Works</a></li>
+            <li><a href="AboutPage.html">About</a></li>
+        </ul>
+        <button class="nav-cta sign-out">Sign out</button>
+        <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="charity.html">Notifications</a>
+        <a href="prac.html">Available Food</a>
+        <a href="how it work.html">How It Works</a>
+        <a href="AboutPage.html">About</a>
+        <a href="Home.html" class="sign-out">Sign out</a>
+    </div>
+
+    <main class="content-wrapper">
+        <header class="page-title">
+            <h1>Incoming donations</h1>
+            <p>New surplus food offers from nearby restaurants and stores.</p>
+        </header>
+
+        <div class="notifications-container">
+            <div class="notification-card">
+                <div class="card-info">
+                    <h3>Healthy Meals Restaurant</h3>
+                    <p>20 sets of assorted vegetable salads and fresh juices ready for donation.</p>
+                    <div class="meta-info">
+                        <span> Pickup before 10:00 PM</span>
+                        <span> 4.2 km away</span>
+                    </div>
+                </div>
+                <button class="btn-accept">Accept Donation</button>
+            </div>
+
+            <div class="notification-card">
+                <div class="card-info">
+                    <h3>Golden Bakery</h3>
+                    <p>15 loaves of sourdough bread and various pastries from today's batch.</p>
+                    <div class="meta-info">
+                        <span> Pickup before 9:00 PM</span>
+                        <span> 1.5 km away</span>
+                    </div>
+                </div>
+                <button class="btn-accept">Accept Donation</button>
+            </div>
+
+            <div class="notification-card">
+                <div class="card-info">
+                    <h3>Fresh Market</h3>
+                    <p>Crate of assorted organic fruits and vegetables (slightly bruised but perfect for cooking).</p>
+                    <div class="meta-info">
+                        <span> Pickup before 8:30 PM</span>
+                        <span> 3.0 km away</span>
+                    </div>
+                </div>
+                <button class="btn-accept">Accept Donation</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="nav-logo" style="cursor:pointer" onclick="window.location.href='Home.html'">Rescue<span>IT</span></div>
+                <p>Reducing food waste, fighting hunger, and building stronger communities &mdash; one meal at a time.</p>
+                <div class="social-row">
+                    <div class="social-btn">X</div>
+                    <div class="social-btn">f</div>
+                    <div class="social-btn">in</div>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="prac.html">Available Food</a></li>
+                    <li><a href="how it work.html">How It Works</a></li>
+                    <li><a href="AboutPage.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get Involved</h4>
+                <ul>
+                    <li><a href="Home.html#restaurant">Donate Food</a></li>
+                    <li><a href="Home.html#volunteer">Volunteer</a></li>
+                    <li><a href="Home.html#restaurant">Partner With Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p style="font-size:13px; color:#64748B; margin-bottom:8px">Weekly food updates near you.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="your@email.com">
+                    <button>Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span> 2026 Rescue IT. All rights reserved.</span>
+            <span>Zero waste. Zero hunger.</span>
+        </div>
+    </footer>
+
+    <script src="charity.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('open');
+        }
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 10) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+    </script>
+</body>
+</html>

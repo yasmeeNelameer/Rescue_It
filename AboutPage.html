@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rescue It - About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="Home.css">
+  <link rel="stylesheet" href="about.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo" onclick="window.location.href='Home.html'">Rescue<span>IT</span></div>
+    <ul class="nav-links">
+      <li><a href="Home.html" id="nav-home">Home</a></li>
+      <li><a href="prac.html" id="nav-food">Available Food</a></li>
+      <li><a href="how it work.html" id="nav-how">How It Works</a></li>
+      <li><a href="AboutPage.html" class="active" id="nav-about">About</a></li>
+    </ul>
+    <button class="nav-cta" onclick="window.location.href='Home.html#auth'">Get Started</button>
+    <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="Home.html">Home</a>
+    <a href="prac.html">Available Food</a>
+    <a href="how it work.html">How It Works</a>
+    <a href="AboutPage.html">About</a>
+    <a href="Home.html#auth">Get Started</a>
+  </div>
+
+
+  <section class="section-padding">
+    <div class="content-wrapper">
+      <span class="badge-story">Our story</span>
+      <h1 class="main-heading">A third of the world's food is wasted. We think we can do better.</h1>
+
+      <p class="text-body">Every day, restaurants prepare more food than they sell. Bakeries pull beautiful loaves from
+        the oven that won't survive the night. Sushi counters slice fresh fish that won't keep. Most of it is thrown
+        away &mdash; not because it's gone bad, but because there isn't a fast, dignified way to get it to the people
+        who'd love to eat it.</p>
+
+      <p class="text-body">Rescue It exists to close that gap. We connect three communities &mdash; diners, restaurants,
+        and charities &mdash; through one simple platform. Diners discover delicious surplus food at a steep discount.
+        Restaurants recover costs and reduce waste. Charities receive donations in real time and feed their neighbors.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding" style="background-color: #ffffff;">
+    <div class="content-wrapper">
+      <h2 class="section-title">What we believe</h2>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+        <div class="value-card">
+          <h4>Food is dignity</h4>
+          <p>Surplus food shouldn't be hidden away or thrown out. It should travel quickly and respectfully to whoever
+            can use it most.</p>
+        </div>
+        <div class="value-card">
+          <h4>Small acts compound</h4>
+          <p>One rescued meal isn't world-changing. A million is. We're building the infrastructure to make those
+            millions easy.</p>
+        </div>
+        <div class="value-card">
+          <h4>Restaurants are heroes</h4>
+          <p>Independent kitchens already operate on razor-thin margins. We exist to support them &mdash; not to add
+            another burden to their day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="content-wrapper">
+      <h2 class="section-title">By the numbers</h2>
+      <p class="text-body">Since launching, our community has rescued over <strong>2.4 million meals</strong> from
+        <strong>820+ restaurants</strong> across <strong>140 cities</strong>. Together, we've prevented an estimated
+        <strong>1,200 metric tons of CO2</strong> from entering the atmosphere. We're just getting started.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding" style="background-color: #ffffff; margin-bottom: 0;">
+    <div class="content-wrapper">
+      <h2 class="section-title">Built by people who care</h2>
+      <p class="text-body" style="max-width: 700px;">Our team is a small group of engineers, designers, and former
+        restaurant operators. We have a single, stubborn belief: with the right tools, ending food waste is a solvable
+        problem. Thanks for being here.</p>
+
+      <div style="display: flex; gap: 16px; margin-top: 20px;">
+        <a href="#" class="btn-brand">Join Rescue It</a>
+        <a href="how it work.html" class="btn-outline-brand">See how it works</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="cursor:pointer" onclick="window.location.href='Home.html'">Rescue<span>IT</span>
+        </div>
+        <p>Reducing food waste, fighting hunger, and building stronger communities &mdash; one meal at a time.</p>
+        <div class="social-row">
+          <div class="social-btn">X</div>
+          <div class="social-btn">f</div>
+          <div class="social-btn">in</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="prac.html">Available Food</a></li>
+          <li><a href="how it work.html">How It Works</a></li>
+          <li><a href="AboutPage.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a href="#">Donate Food</a></li>
+          <li><a href="#">Volunteer</a></li>
+          <li><a href="#">Partner With Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="font-size:13px; color:#64748B; margin-bottom:8px">Weekly food updates near you.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="your@email.com">
+          <button>Join</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span> 2026 Rescue IT. All rights reserved.</span>
+      <span>Zero waste. Zero hunger.</span>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('open');
+    }
+    function closeMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu) menu.classList.remove('open');
+    }
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 10) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescue It - Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="checkout.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo" onclick="location.href='Home.html'">Rescue<span>IT</span></div>
+        <ul class="nav-links">
+            <li><a href="Home.html" id="nav-home">Home</a></li>
+            <li><a href="prac.html" id="nav-food">Available Food</a></li>
+            <li><a href="how it work.html" id="nav-how">How It Works</a></li>
+            <li><a href="AboutPage.html" id="nav-about">About</a></li>
+        </ul>
+        <button class="nav-cta" onclick="location.href='Home.html#auth'">Get Started</button>
+        <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="Home.html">Home</a>
+        <a href="prac.html">Available Food</a>
+        <a href="how it work.html">How It Works</a>
+        <a href="AboutPage.html">About</a>
+        <button class="nav-cta" style="width:100%; margin-top:10px" onclick="location.href='Home.html#auth'">Get Started</button>
+    </div>
+
+
+    <main class="checkout-page container my-5">
+        <div class="checkout-header">
+            <div>
+                <h1 class="checkout-title">Checkout</h1>
+                <p class="checkout-subtitle">Almost there. Confirm your details and we'll let the restaurant know you're on your way.</p>
+            </div>
+            <a href="prac.html" class="btn btn-outline-secondary rounded-pill px-4">&larr; Keep browsing</a>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm p-4 rounded-4">
+                    <h3 class="fw-bold h5 mb-4">Delivery details</h3>
+                    <form id="checkout-form">
+                        <div class="mb-4">
+                            <label class="form-label text-muted small fw-bold">Full name</label>
+                            <input type="text" class="form-control form-control-lg bg-light border-0 rounded-3" placeholder="Alex Morgan" required>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label text-muted small fw-bold">City</label>
+                                <input type="text" class="form-control form-control-lg bg-light border-0 rounded-3" placeholder="San Francisco" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label text-muted small fw-bold">Street</label>
+                                <input type="text" class="form-control form-control-lg bg-light border-0 rounded-3" placeholder="124 Folsom Street" required>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label text-muted small fw-bold">Apartment</label>
+                                <input type="text" class="form-control form-control-lg bg-light border-0 rounded-3" placeholder="Apt 4B" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label text-muted small fw-bold">Floor</label>
+                                <input type="text" class="form-control form-control-lg bg-light border-0 rounded-3" placeholder="3rd floor" required>
+                            </div>
+                        </div>
+                        <div class="mb-0">
+                            <label class="form-label text-muted small fw-bold">Order notes</label>
+                            <textarea class="form-control form-control-lg bg-light border-0 rounded-3" rows="3" placeholder="Buzzer code, allergies, etc."></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm p-4 rounded-4">
+                    <h3 class="fw-bold h5 mb-4">Order summary</h3>
+                    
+                    <div id="summary-items" class="mb-4">
+                        <p class="text-muted text-center py-3">Your cart is empty.</p>
+                    </div>
+
+                    <div class="border-top pt-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Subtotal</span>
+                            <span class="fw-bold" id="subtotal">0.00 EGP</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="text-muted">Delivery fee</span>
+                            <span class="fw-bold" id="delivery-fee">3.50 EGP</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-2">
+                            <h4 class="fw-bold h3 mb-0">Total</h4>
+                            <h4 class="fw-bold h3 mb-0" id="total">0.00 EGP</h4>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-success w-100 py-3 mt-4 rounded-3 fw-bold btn-confirm">Confirm order</button>
+                    <p class="text-muted text-center small mt-3">Pay on pickup or at delivery.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="nav-logo" style="cursor:pointer" onclick="location.href='Home.html'">Rescue<span>IT</span></div>
+                <p>Reducing food waste, fighting hunger, and building stronger communities &mdash; one meal at a time.</p>
+                <div class="social-row">
+                    <div class="social-btn">X</div>
+                    <div class="social-btn">f</div>
+                    <div class="social-btn">in</div>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="prac.html">Available Food</a></li>
+                    <li><a href="how it work.html">How It Works</a></li>
+                    <li><a href="AboutPage.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get Involved</h4>
+                <ul>
+                    <li><a href="Home.html#restaurant">Donate Food</a></li>
+                    <li><a href="Home.html#volunteer">Volunteer</a></li>
+                    <li><a href="Home.html#restaurant">Partner With Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p style="font-size:13px; color:#64748B; margin-bottom:8px">Weekly food updates near you.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="your@email.com">
+                    <button>Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span> 2026 Rescue IT. All rights reserved.</span>
+            <span>Zero waste. Zero hunger.</span>
+        </div>
+    </footer>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

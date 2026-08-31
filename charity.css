@@ -1,0 +1,137 @@
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f8fafc;
+    margin: 0;
+    color: #1e293b;
+}
+
+.content-wrapper { 
+    width: 92%; 
+    max-width: 1040px; 
+    margin: 60px auto; 
+}
+
+.page-title {
+    margin-bottom: 50px;
+}
+
+.page-title h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 900;
+    letter-spacing: 0;
+    margin-bottom: 12px;
+}
+
+.page-title p {
+    color: #64748b;
+    font-size: 18px;
+}
+
+.notifications-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 100px;
+}
+
+.notification-card {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.02);
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.notification-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+}
+
+.card-info h3 {
+    font-family: 'Fraunces', serif;
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.card-info p {
+    margin: 0 0 16px 0;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.meta-info {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+    color: #059669;
+    font-weight: 700;
+}
+
+.meta-info span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #E8F5E9;
+    padding: 6px 14px;
+    border-radius: 50px;
+}
+
+.btn-accept {
+    background: linear-gradient(135deg, #059669, #059669);
+    color: white;
+    padding: 16px 36px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 15px;
+    box-shadow: 0 10px 20px rgba(46, 125, 50, 0.2);
+}
+
+.btn-accept:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(46, 125, 50, 0.3);
+}
+
+
+.navbar .sign-out {
+    background: #E8F5E9;
+    color: #059669;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.navbar .sign-out:hover {
+    background: #059669;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .notification-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 32px;
+    }
+    .btn-accept {
+        width: 100%;
+    }
+    .meta-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

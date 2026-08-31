@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "name": "Smoked Turkey sandwich",
+    "restaurant": "Gourmet Food Stores",
+    "logo": "logos/Gourmet.png",
+    "category": "sandwiches",
+    "oldPrice": 180,
+    "newPrice": 160,
+    "discount": "20% OFF",
+    "image": "photos/turkey.jpg",
+    "description":"Premium smoked turkey slices paired with fresh greens, melted cheddar, and our signature sauce on a toasted multi-seed baguette.",
+    "hoursLeft": 6, 
+    "daysLeft": 0
+  },
+  {
+    "id": 2,
+    "name": "Steak Sandwich",
+    "restaurant": "bouchee",
+    "logo": "logos/bouchee.jpg",
+    "category": "sandwiches",
+    "oldPrice": 280,
+    "newPrice": 256,
+    "discount": "15% OFF",
+    "image": "photos/Steak Sandwich.jpg",
+    "description":"Tender strips of grilled steak topped with caramelized onions, melted provolone, and a touch of horseradish mayo."
+    ,"hoursLeft": 3, 
+  "daysLeft": 0
+  },
+  {
+    "id": 3,
+    "name": "Tuna Sandwich",
+    "restaurant": "The Bakery Shop",
+    "logo": "logos/The Bakery Shop.jfif",
+    "category": "sandwiches",
+    "oldPrice": 200,
+    "newPrice": 145,
+    "discount": "25% OFF",
+    "image": "photos/tuna-salad-sandwichj.pg.jpg",
+    "description":"Flaky tuna chunks mixed with sweet corn, colorful peppers, and a light herb dressing for a refreshing bite."
+    ,"hoursLeft": 2, 
+  "daysLeft": 0
+  },
+  {
+    "id": 4,
+    "name": "Tiramisu",
+    "restaurant": "Tortina",
+    "logo": "logos/Tortina.png",
+    "category": "desserts",
+    "oldPrice": 200,
+    "newPrice": 150,
+    "discount": "25% OFF",
+    "image": "photos/tiramisu-17.jpg",
+    "description":"A classic Italian masterpiece featuring layers of coffee-soaked ladyfingers and rich, velvety mascarpone cream."
+    ,"hoursLeft": 0, 
+  "daysLeft": 3
+  
+  },
+  {
+    "id": 5,
+    "name": "Strawberry Cheesecake",
+    "restaurant": "La Poire",
+    "logo": "logos/La Poire.png",
+    "category": "desserts",
+    "oldPrice": 180,
+    "newPrice": 90,
+    "discount": "50% OFF",
+    "image": "photos/Strawberry cheesecake .jpg",
+    "description":"Smooth and creamy New York-style cheesecake topped with a vibrant homemade strawberry glaze and fresh fruit."
+    ,"hoursLeft": 5, 
+    "daysLeft": 1
+  },
+  {
+    "id": 6,
+    "name": "Chocolate Creap",
+    "restaurant": "Nola",
+    "logo": "logos/Nola.jfif",
+    "category": "desserts",
+    "oldPrice": 130,
+    "newPrice": 70,
+    "discount": "45% OFF",
+    "image": "photos/creap.jpg",
+    "description":"Delicate handmade crepe filled with warm Nutella and garnished with a medley of fresh seasonal berries."
+    ,"hoursLeft": 4, 
+  "daysLeft": 0
+  }
+  ,{
+    "id": 7,
+    "name": "Greek Salad",
+    "restaurant": "Saladero",
+    "logo": "logos/Saladero.jpg",
+    "category": "salads",
+    "oldPrice": 140,
+    "newPrice": 65,
+    "discount": "55% OFF",
+    "image": "photos/greekSalad.jpg",
+    "description":"A crisp mix of cucumbers, tomatoes, and Kalamata olives, topped with authentic feta cheese and extra virgin olive oil."
+    ,"hoursLeft": 2, 
+  "daysLeft": 2
+  },
+  {
+    "id": 8,
+    "name": "Potato Salad",
+    "restaurant": "Salad Master",
+    "logo": "logos/The Bakery Shop.jfif",
+    "category": "salads",
+    "oldPrice": 100,
+    "newPrice": 50,
+    "discount": "50% OFF",
+    "image": "photos/Potato Salad.jpg",
+    "description":"Herb-infused potato cubes tossed in a light vinaigrette, finished with fresh parsley and vibrant pomegranate seeds."
+    ,"hoursLeft": 3, 
+  "daysLeft": 1
+  },
+  {
+    "id": 9,
+    "name": "Tabbouleh Salad",
+    "restaurant": "Saladero",
+    "logo": "logos/Saladero.jpg",
+    "category": "salads",
+    "oldPrice": 110,
+    "newPrice": 55,
+    "discount": "50% OFF",
+    "image": "photos/tabbouleh.jpg",
+    "description":"Traditional Lebanese parsley salad with fine bulgur, ripe tomatoes, and a zesty lemon-mint dressing."
+    ,"hoursLeft": 0, 
+  "daysLeft": 2
+  },
+  {
+    "id": 10,
+    "name": "Butter Croissant",
+    "restaurant": "Nola",
+    "logo": "logos/Nola.jfif",
+    "category": "pastries",
+    "oldPrice": 180,
+    "newPrice": 144,
+    "discount": "20% OFF",
+    "image": "photos/Butter Croissant.jpg",
+    "description":"Golden, buttery, and flaky French croissants baked fresh daily for that perfect morning crunch."
+    ,"hoursLeft": 9, 
+  "daysLeft": 0
+  },
+  {
+    "id": 11,
+    "name": "Raspberry Danish",
+    "restaurant": "bouchee",
+    "logo": "logos/bouchee.jpg",
+    "category": "pastries",
+    "oldPrice": 200,
+    "newPrice": 100,
+    "discount": "50% OFF",
+    "image": "photos/Raspberry Danish Pastry.jpg",
+    "description":"A buttery, multi-layered Danish pastry filled with smooth custard and topped with a vibrant raspberry glaze and fresh berries."
+    ,"hoursLeft": 8, 
+  "daysLeft": 0
+  },
+  {
+    "id": 12,
+    "name": "Danish Roll",
+    "restaurant": "La Poire",
+    "logo":  "logos/La Poire.png",
+    "category": "pastries",
+    "oldPrice": 100,
+    "newPrice": 80,
+    "discount": "20% OFF",
+    "image": "photos/Danish Roll.jpg",
+    "description":"Classic heart-shaped French pastry featuring crispy, caramelized layers of puff pastry with a delicate hint of sweetness."
+    ,"hoursLeft": 7, 
+  "daysLeft": 0
+  }
+]
+
